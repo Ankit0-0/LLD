@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/ParkingLot/pom.xml" />
         <option value="$PROJECT_DIR$/StackOverFlow/pom.xml" />
+        <option value="$PROJECT_DIR$/loggin_framework/pom.xml" />
       </list>
     </option>
   </component>

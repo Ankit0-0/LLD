@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ParkingLot" />
         <module name="StackOverFlow" />
+        <module name="loggin_framework" />
       </profile>
     </annotationProcessing>
   </component>
