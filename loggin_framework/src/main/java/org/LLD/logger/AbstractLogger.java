@@ -9,7 +9,7 @@ public abstract class AbstractLogger {
     }
 
     public void logMessage(int level, String msg) {
-        if (this.level <= level) {
+        if (this.level == level) {
             display(msg);
         }
         if (nextLoggingLevel != null) {
