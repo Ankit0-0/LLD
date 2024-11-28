@@ -1,12 +1,15 @@
 package org.LLD.logger;
 
-public class DebugLogger extends AbstractLogger{
+import org.LLD.LogSubject;
+
+public class DebugLogger extends AbstractLogger {
     public DebugLogger(int level) {
         this.level = level;
     }
 
     @Override
-    protected void display(String msg) {
-        System.out.println("DEBUG: " + msg);
+    protected void display(String msg, LogSubject logSubject) {
+        String message = "DEBUG: " + msg;
+        logSubject.notifyAllObserver(3, message);
     }
 }

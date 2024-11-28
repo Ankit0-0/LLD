@@ -5,10 +5,12 @@ import org.LLD.logger.AbstractLogger;
 import java.io.Serializable;
 
 import static org.LLD.logger.LogManager.buildChainOfLogger;
+import static org.LLD.logger.LogManager.buildSubject;
 
 public class Logger implements Cloneable, Serializable {
     private volatile static Logger loggerObject;
     private volatile static AbstractLogger chainOfLogger;
+    private volatile static LogSubject logSubject;
 
     private Logger() {
         if (loggerObject != null) {
@@ -22,6 +24,7 @@ public class Logger implements Cloneable, Serializable {
                 if (loggerObject == null) {
                     loggerObject = new Logger();
                     chainOfLogger = buildChainOfLogger();
+                    logSubject = buildSubject();
                 }
             }
         }
@@ -37,7 +40,7 @@ public class Logger implements Cloneable, Serializable {
     }
 
     private void createLog(int level, String msg) {
-        chainOfLogger.logMessage(level, msg);
+        chainOfLogger.logMessage(level, msg, logSubject);
     }
 
     public void info(String msg) {
