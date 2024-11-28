@@ -11,7 +11,8 @@ public abstract class AbstractLogger {
     public void logMessage(int level, String msg) {
         if (this.level <= level) {
             display(msg);
-        } else if (nextLoggingLevel != null) {
+        }
+        if (nextLoggingLevel != null) {
             nextLoggingLevel.logMessage(level, msg);
         }
     }
