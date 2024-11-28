@@ -1,6 +1,6 @@
 package org.LLD.logger;
 
-import org.LLD.LogSubject;
+import org.LLD.observer.LogSubject;
 
 public class DebugLogger extends AbstractLogger {
     public DebugLogger(int level) {

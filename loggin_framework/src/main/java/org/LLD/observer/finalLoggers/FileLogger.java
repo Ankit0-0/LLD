@@ -1,4 +1,6 @@
-package org.LLD;
+package org.LLD.observer.finalLoggers;
+
+import org.LLD.observer.LogObserver;
 
 public class FileLogger implements LogObserver {
     @Override

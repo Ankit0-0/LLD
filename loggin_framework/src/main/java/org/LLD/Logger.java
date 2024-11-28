@@ -1,6 +1,7 @@
 package org.LLD;
 
 import org.LLD.logger.AbstractLogger;
+import org.LLD.observer.LogSubject;
 
 import java.io.Serializable;
 

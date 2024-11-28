@@ -1,4 +1,4 @@
-package org.LLD;
+package org.LLD.observer;
 
 import java.util.*;
 

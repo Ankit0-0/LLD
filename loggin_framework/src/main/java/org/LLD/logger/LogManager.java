@@ -1,8 +1,8 @@
 package org.LLD.logger;
 
-import org.LLD.ConsoleLogger;
-import org.LLD.FileLogger;
-import org.LLD.LogSubject;
+import org.LLD.observer.finalLoggers.ConsoleLogger;
+import org.LLD.observer.finalLoggers.FileLogger;
+import org.LLD.observer.LogSubject;
 
 public class LogManager {
     public static AbstractLogger buildChainOfLogger() {
